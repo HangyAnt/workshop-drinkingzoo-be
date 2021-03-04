@@ -5,6 +5,7 @@ public class WaterBucket {
     private boolean isDirty;
     private int waterAmountInLiter;
 
+
     public WaterBucket(boolean isDirty, int waterAmountInLiter) {
         this.isDirty = isDirty;
         this.waterAmountInLiter = waterAmountInLiter;

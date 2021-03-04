@@ -11,11 +11,16 @@ public abstract class Animal {
     }
 
     public void drink(WaterBucket waterBucket) {
-        drunkWater += waterBucket.getWaterAmountInLiter();
-        waterBucket.setWaterAmountInLiter(0);
-        makeSound();
-        if (waterBucket.isDirty()) {
-            isSick = true;
+        if (isSick) {
+            System.out.println("I don't drink water");
+        }
+        else {
+            drunkWater += waterBucket.getWaterAmountInLiter();
+            waterBucket.setWaterAmountInLiter(0);
+            makeSound();
+            if (waterBucket.isDirty()) {
+                isSick = true;
+            }
         }
     }
 
