@@ -1,13 +1,32 @@
 package com.codecool.drinkingzoo;
 
-public abstract class Animal {
+public abstract class Animal extends Person{
 
-    protected String name;
+
     protected int drunkWater;
     private boolean isSick;
+    protected Continent homeContinent;
 
-    public Animal(String name) {
-        this.name = name;
+    public String getName() {
+        return name;
+    }
+
+    public int getDrunkWater() {
+        return drunkWater;
+    }
+
+    public void setSick(boolean sick) {
+        isSick = sick;
+    }
+
+    public boolean isSick() {
+        return isSick;
+    }
+
+    public Animal(String name, Continent homeContinent) {
+            super(name);
+            this.homeContinent=homeContinent;
+
     }
 
     public void drink(WaterBucket waterBucket) {

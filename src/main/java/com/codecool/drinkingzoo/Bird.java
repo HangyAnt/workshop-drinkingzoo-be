@@ -3,7 +3,8 @@ package com.codecool.drinkingzoo;
 public class Bird extends Animal {
 
     public Bird(String name) {
-        super(name);
+
+        super(name, Continent.EUROPE);
     }
 
     @Override

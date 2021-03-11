@@ -3,7 +3,7 @@ package com.codecool.drinkingzoo;
 public class Snake extends Animal {
 
     public Snake(String name) {
-        super(name);
+        super(name,Continent.ASIA);
     }
 
     @Override

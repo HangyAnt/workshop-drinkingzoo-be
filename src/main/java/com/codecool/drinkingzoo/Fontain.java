@@ -5,7 +5,8 @@ import java.util.Random;
 public class Fontain implements WaterBucketProvider {
     public WaterBucket provideWaterBucket() {
         Random random = new Random();
-        boolean isDirty = (random.nextInt(4) == 0);
-        random.nextInt(5) + 1;
+        boolean isDirty = (random.nextInt(2) == 0);
+        int waterAmountInLiter = random.nextInt(3) + 1;
+        return new WaterBucket (isDirty, waterAmountInLiter);
     }
 }
